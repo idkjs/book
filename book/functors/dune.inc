@@ -1,6 +1,7 @@
 (alias
  (name   runtest)
  (deps   (:x README.md)
+         (package mdx)
          (:y6 ../../examples/code/functors/compare_example.ml)
          (:y5 ../../examples/code/functors/extended_fqueue.ml)
          (:y4 ../../examples/code/functors/extended_fqueue.mli)

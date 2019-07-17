@@ -1,6 +1,7 @@
 (alias
  (name   runtest)
  (deps   (:x README.md)
+         (package mdx)
          (:y5 ../../examples/code/variables-and-functions/abs_diff.mli)
          (:y4 ../../examples/code/variables-and-functions/htable_sig1.ml)
          (:y3 ../../examples/code/variables-and-functions/htable_sig2.ml)

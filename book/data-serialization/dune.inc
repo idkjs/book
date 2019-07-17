@@ -1,6 +1,7 @@
 (alias
  (name   runtest)
  (deps   (:x README.md)
+         (package mdx)
          (:y8 ../../examples/code/sexpr/int_interval_manual_sexp.mli)
          (:y7 ../../examples/code/sexpr/int_interval_nosexp.mli)
          (:y6 ../../examples/code/sexpr/read_foo/read_foo.ml)
@@ -31,6 +32,7 @@
 (alias
  (name   runtest-all)
  (deps   (:x README.md)
+         (package mdx)
          (:y8 ../../examples/code/sexpr/int_interval_manual_sexp.mli)
          (:y7 ../../examples/code/sexpr/int_interval_nosexp.mli)
          (:y6 ../../examples/code/sexpr/read_foo/read_foo.ml)

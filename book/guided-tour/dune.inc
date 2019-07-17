@@ -1,6 +1,7 @@
 (alias
  (name   runtest)
  (deps   (:x README.md)
+         (package mdx)
          (:y1 ../../examples/code/guided-tour/recursion.ml)
          (:y0 ../../examples/code/guided-tour/sum/sum.ml)
          (source_tree ../../examples/code/guided-tour/sum)

@@ -1,6 +1,7 @@
 (alias
  (name   runtest)
  (deps   (:x README.md)
+         (package mdx)
          (:y2 ../../examples/code/error-handling/blow_up/blow_up.ml)
          (:y1 ../../examples/code/error-handling/exn_cost/exn_cost.ml)
          (:y0 ../../examples/code/error-handling/result.mli)
@@ -16,6 +17,7 @@
 (alias
  (name   runtest-all)
  (deps   (:x README.md)
+         (package mdx)
          (:y2 ../../examples/code/error-handling/blow_up/blow_up.ml)
          (:y1 ../../examples/code/error-handling/exn_cost/exn_cost.ml)
          (:y0 ../../examples/code/error-handling/result.mli)

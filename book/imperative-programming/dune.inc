@@ -1,6 +1,7 @@
 (alias
  (name   runtest)
  (deps   (:x README.md)
+         (package mdx)
          (:y8 ../../examples/code/imperative-programming/dictionary.ml)
          (:y7 ../../examples/code/imperative-programming/dictionary.mli)
          (:y6 ../../examples/code/imperative-programming/dictionary2.ml)
@@ -29,6 +30,7 @@
 (alias
  (name   runtest-all)
  (deps   (:x README.md)
+         (package mdx)
          (:y8 ../../examples/code/imperative-programming/dictionary.ml)
          (:y7 ../../examples/code/imperative-programming/dictionary.mli)
          (:y6 ../../examples/code/imperative-programming/dictionary2.ml)

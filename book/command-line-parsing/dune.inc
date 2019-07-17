@@ -1,6 +1,7 @@
 (alias
  (name   runtest)
  (deps   (:x README.md)
+         (package mdx)
          (:y15 ../../examples/code/command-line-parsing/cal_add_days/cal.ml)
          (:y14 ../../examples/code/command-line-parsing/cal_add_interactive/cal.ml)
          (:y13 ../../examples/code/command-line-parsing/cal_add_interactive2/cal.ml)
@@ -51,6 +52,7 @@
 (alias
  (name   runtest-all)
  (deps   (:x README.md)
+         (package mdx)
          (:y15 ../../examples/code/command-line-parsing/cal_add_days/cal.ml)
          (:y14 ../../examples/code/command-line-parsing/cal_add_interactive/cal.ml)
          (:y13 ../../examples/code/command-line-parsing/cal_add_interactive2/cal.ml)

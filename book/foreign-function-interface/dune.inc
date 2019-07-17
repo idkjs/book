@@ -1,6 +1,7 @@
 (alias
  (name   runtest)
  (deps   (:x README.md)
+         (package mdx)
          (:y8 ../../examples/code/ctypes/ctypes.mli)
          (:y7 ../../examples/code/ctypes/ctypes_impl.ml)
          (:y6 ../../examples/code/ffi/datetime/datetime.ml)
@@ -30,6 +31,7 @@
 (alias
  (name   runtest-all)
  (deps   (:x README.md)
+         (package mdx)
          (:y8 ../../examples/code/ctypes/ctypes.mli)
          (:y7 ../../examples/code/ctypes/ctypes_impl.ml)
          (:y6 ../../examples/code/ffi/datetime/datetime.ml)

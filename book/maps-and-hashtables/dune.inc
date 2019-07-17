@@ -1,6 +1,7 @@
 (alias
  (name   runtest)
  (deps   (:x README.md)
+         (package mdx)
          (:y3 ../../examples/code/files-modules-and-programs/freq-fast/counter.ml)
          (:y2 ../../examples/code/files-modules-and-programs/freq-fast/counter.mli)
          (:y1 ../../examples/code/maps-and-hash-tables/map_vs_hash/map_vs_hash.ml)
@@ -18,6 +19,7 @@
 (alias
  (name   runtest-all)
  (deps   (:x README.md)
+         (package mdx)
          (:y3 ../../examples/code/files-modules-and-programs/freq-fast/counter.ml)
          (:y2 ../../examples/code/files-modules-and-programs/freq-fast/counter.mli)
          (:y1 ../../examples/code/maps-and-hash-tables/map_vs_hash/map_vs_hash.ml)

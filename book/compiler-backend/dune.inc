@@ -1,6 +1,7 @@
 (alias
  (name   runtest)
  (deps   (:x README.md)
+         (package mdx)
          (:y9 ../../examples/code/back-end-embed/embed_me1.ml)
          (:y8 ../../examples/code/back-end-embed/embed_me2.ml)
          (:y7 ../../examples/code/back-end/alternate_list/alternate_list.ml)
@@ -33,6 +34,7 @@
 (alias
  (name   runtest-all)
  (deps   (:x README.md)
+         (package mdx)
          (:y9 ../../examples/code/back-end-embed/embed_me1.ml)
          (:y8 ../../examples/code/back-end-embed/embed_me2.ml)
          (:y7 ../../examples/code/back-end/alternate_list/alternate_list.ml)

@@ -1,6 +1,7 @@
 (alias
  (name   runtest)
  (deps   (:x README.md)
+         (package mdx)
          (:y21 ../../examples/code/files-modules-and-programs/abstract_username.ml)
          (:y20 ../../examples/code/files-modules-and-programs/common.ml)
          (:y19 ../../examples/code/files-modules-and-programs/ext_list.ml)
@@ -63,6 +64,7 @@
 (alias
  (name   runtest-all)
  (deps   (:x README.md)
+         (package mdx)
          (:y21 ../../examples/code/files-modules-and-programs/abstract_username.ml)
          (:y20 ../../examples/code/files-modules-and-programs/common.ml)
          (:y19 ../../examples/code/files-modules-and-programs/ext_list.ml)

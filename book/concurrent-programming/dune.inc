@@ -1,6 +1,7 @@
 (alias
  (name   runtest)
  (deps   (:x README.md)
+         (package mdx)
          (:y8 ../../examples/code/async/better_echo.ml)
          (:y7 ../../examples/code/async/echo/echo.ml)
          (:y6 ../../examples/code/async/search/search.ml)
@@ -31,6 +32,7 @@
 (alias
  (name   runtest-all)
  (deps   (:x README.md)
+         (package mdx)
          (:y8 ../../examples/code/async/better_echo.ml)
          (:y7 ../../examples/code/async/echo/echo.ml)
          (:y6 ../../examples/code/async/search/search.ml)

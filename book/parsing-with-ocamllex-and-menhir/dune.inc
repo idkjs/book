@@ -1,6 +1,7 @@
 (alias
  (name   runtest)
  (deps   (:x README.md)
+         (package mdx)
          (:y5 ../../examples/code/parsing-test/test.ml)
          (:y4 ../../examples/code/parsing/json.ml)
          (:y3 ../../examples/code/parsing/manual_token_type.ml)

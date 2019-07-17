@@ -1,6 +1,7 @@
 (alias
  (name   runtest)
  (deps   (:x README.md)
+         (package mdx)
          (:y2 ../../examples/code/objects/is_barbell.ml)
          (:y1 ../../examples/code/objects/narrowing.ml)
          (:y0 ../../examples/code/objects/subtyping.ml)
@@ -15,6 +16,7 @@
 (alias
  (name   runtest-all)
  (deps   (:x README.md)
+         (package mdx)
          (:y2 ../../examples/code/objects/is_barbell.ml)
          (:y1 ../../examples/code/objects/narrowing.ml)
          (:y0 ../../examples/code/objects/subtyping.ml)

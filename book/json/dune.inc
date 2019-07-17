@@ -1,6 +1,7 @@
 (alias
  (name   runtest)
  (deps   (:x README.md)
+         (package mdx)
          (:y7 ../../examples/code/json/github_j_excerpt.mli)
          (:y6 ../../examples/code/json/github_org_info/github_org_info.ml)
          (:y5 ../../examples/code/json/list_excerpt.mli)
@@ -25,6 +26,7 @@
 (alias
  (name   runtest-all)
  (deps   (:x README.md)
+         (package mdx)
          (:y7 ../../examples/code/json/github_j_excerpt.mli)
          (:y6 ../../examples/code/json/github_org_info/github_org_info.ml)
          (:y5 ../../examples/code/json/list_excerpt.mli)

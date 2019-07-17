@@ -1,6 +1,7 @@
 (alias
  (name   runtest)
  (deps   (:x README.md)
+         (package mdx)
          (:y3 ../../examples/code/variants-termcol-annotated/terminal_color.ml)
          (:y2 ../../examples/code/variants-termcol-fixed/terminal_color.ml)
          (:y1 ../../examples/code/variants-termcol/terminal_color.ml)

@@ -1,6 +1,7 @@
 (alias
  (name   runtest)
  (deps   (:x README.md)
+         (package mdx)
          (:y3 ../../examples/code/classes-async/multiple_inheritance.ml)
          (:y2 ../../examples/code/classes-async/multiple_inheritance_wrong.ml)
          (:y1 ../../examples/code/classes-async/shapes/shapes.ml)

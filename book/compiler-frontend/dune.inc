@@ -1,6 +1,7 @@
 (alias
  (name   runtest)
  (deps   (:x README.md)
+         (package mdx)
          (:y14 ../../examples/code/front-end/alice.ml)
          (:y13 ../../examples/code/front-end/alice.mli)
          (:y12 ../../examples/code/front-end/alice_combined.ml)
@@ -42,6 +43,7 @@
 (alias
  (name   runtest-all)
  (deps   (:x README.md)
+         (package mdx)
          (:y14 ../../examples/code/front-end/alice.ml)
          (:y13 ../../examples/code/front-end/alice.mli)
          (:y12 ../../examples/code/front-end/alice_combined.ml)

@@ -1,6 +1,7 @@
 (alias
  (name   runtest)
  (deps   (:x README.md)
+         (package mdx)
          (:y1 ../../examples/code/gc/barrier_bench/barrier_bench.ml)
          (:y0 ../../examples/code/gc/finalizer/finalizer.ml)
          (source_tree ../../examples/code/gc/barrier_bench)
@@ -14,6 +15,7 @@
 (alias
  (name   runtest-all)
  (deps   (:x README.md)
+         (package mdx)
          (:y1 ../../examples/code/gc/barrier_bench/barrier_bench.ml)
          (:y0 ../../examples/code/gc/finalizer/finalizer.ml)
          (source_tree ../../examples/code/gc/barrier_bench)

@@ -1,6 +1,7 @@
 (alias
  (name   runtest)
  (deps   (:x README.md)
+         (package mdx)
          (:y2 ../../examples/code/fcm/query_handler_loader/query_handler.ml)
          (:y1 ../../examples/code/fcm/query_handler_loader/query_handler_core.ml)
          (:y0 ../../examples/code/fcm/query_handler_loader/query_handler_loader.ml)
@@ -15,6 +16,7 @@
 (alias
  (name   runtest-all)
  (deps   (:x README.md)
+         (package mdx)
          (:y2 ../../examples/code/fcm/query_handler_loader/query_handler.ml)
          (:y1 ../../examples/code/fcm/query_handler_loader/query_handler_core.ml)
          (:y0 ../../examples/code/fcm/query_handler_loader/query_handler_loader.ml)
