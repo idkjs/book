@@ -154,7 +154,8 @@ val c : Core_kernel.Gc.control =
   {Core_kernel.Gc.Control.minor_heap_size = 262144;
    major_heap_increment = 15; space_overhead = 80; verbose = 0;
    max_overhead = 500; stack_limit = 1048576; allocation_policy = 0;
-   window_size = 1}
+   window_size = 1; custom_major_ratio = 44; custom_minor_ratio = 100;
+   custom_minor_max_size = 8192}
 # Gc.tune ~minor_heap_size:(262144 * 2) ()
 - : unit = ()
 ```
@@ -532,7 +533,7 @@ scenarios using `Core_bench` and experiment with the trade-offs. The
 command-line benchmark binaries have a number of useful options that affect
 garbage collection behavior:
 
-```sh dir=../../examples/code/gc/barrier_bench
+```sh dir=../../examples/code/gc/barrier_bench,skip
 $ dune build barrier_bench.exe
 $ ./_build/default/barrier_bench.exe -help
 Benchmark for mutable, immutable
@@ -653,7 +654,7 @@ Building and running this should show the following output:
 
 
 
-```sh dir=../../examples/code/gc/finalizer
+```sh dir=../../examples/code/gc/finalizer,skip
 $ dune build finalizer.exe
 $ ./_build/default/finalizer.exe
        immediate int: FAIL
