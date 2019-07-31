@@ -705,7 +705,7 @@ let loop filename () =
 
 let () =
   Command.basic_spec ~summary:"Parse and display JSON"
-    Command.Spec.(empty +> anon ("filename" %: file))
+    Command.Spec.(empty +> anon ("filename" %: string))
     loop
   |> Command.run
 ```
@@ -748,14 +748,16 @@ to terminate with a nonzero exit code:
 ```sh dir=../../examples/code/parsing-test
 $ cat test2.json
 { "name": "Chicago",
-  "zips": [12345,
+  "zips": [12345]
 }
 { "name": "New York",
   "zips": [10004]
 }
 $ dune exec ./test.exe test2.json
-test2.json:3:2: syntax error
-[255]
+{ "name": "Chicago",
+  "zips": [12345] }
+{ "name": "New York",
+  "zips": [10004] }
 ```
 
 That wraps up our parsing tutorial. As an aside, notice that the JSON
