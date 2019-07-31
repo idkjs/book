@@ -693,7 +693,7 @@ module/Map.to_tree]{.idx}[maps/tree structure]{.idx}
 ```ocaml env=main
 # let ord_tree = Map.Using_comparator.to_tree ord_map
 val ord_tree :
-  (string, int, String.comparator_witness) Map.Using_comparator.Tree.t =
+  (string, int, String.comparator_witness) Core_kernel.Map_intf.Tree.t =
   <abstr>
 ```
 
@@ -720,10 +720,10 @@ following example, using the wrong comparator will lead to a type error:
 # Map.Using_comparator.Tree.find ~comparator:Reverse.comparator ord_tree "snoo"
 Characters 62-70:
 Error: This expression has type
-         (string, int, String.comparator_witness) Map.Using_comparator.Tree.t
+         (string, int, String.comparator_witness) Core_kernel.Map_intf.Tree.t
        but an expression was expected of type
          (string, int, Reverse.comparator_witness)
-         Map.Using_comparator.Tree.t
+         Core_kernel.Map_intf.Tree.t
        Type String.comparator_witness is not compatible with type
          Reverse.comparator_witness 
 ```
