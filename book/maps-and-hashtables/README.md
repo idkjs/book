@@ -213,7 +213,7 @@ This module has the basic functionality we need, but doesn't satisfy the
 `Comparator.S` interface, so we can't use it for creating a map, as you can
 see.
 
-```ocaml env=main
+```ocaml env=main,skip
 # Map.empty (module Book)
 Characters 18-22:
 Error: Signature mismatch:
