@@ -205,7 +205,7 @@
       (ref ((t 0.8.2) (commit 2c2254e773dbc9c9e6b3a24f983d826c23630d97)))
       (provided_packages (((name markup) (version (0.8.2))))))
      ((dir mdx.dev) (upstream https://github.com/realworldocaml/mdx.git)
-      (ref ((t master) (commit b6779d277c74f85b1b165296c5065bbeff5b295a)))
+      (ref ((t master) (commit b1e84707fb0897f1144c30eef22cbc1adb572bc5)))
       (provided_packages (((name mdx) (version (dev))))))
      ((dir mirage-clock.3.0.1+dune)
       (upstream https://github.com/mirage/mirage-clock.git)
