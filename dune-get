@@ -224,8 +224,10 @@
      ((dir markup.0.8.2) (upstream https://github.com/aantron/markup.ml.git)
       (ref ((t 0.8.2) (commit 2c2254e773dbc9c9e6b3a24f983d826c23630d97)))
       (provided_packages (((name markup) (version (0.8.2))))))
-     ((dir mdx.zdev) (upstream https://github.com/realworldocaml/mdx.git)
-      (ref ((t master) (commit 3ef3ca8b39c88567c8c0de9a2af7213821d8b9dc)))
+     ((dir mdx.zdev) (upstream https://github.com/gpetiot/mdx.git)
+      (ref
+       ((t apply-preludes-all-envs)
+        (commit ec9badfe6ef60fe86ae321e95cad3e96b1563586)))
       (provided_packages (((name mdx)))))
      ((dir menhir.20200612)
       (upstream https://gitlab.inria.fr/fpottier/menhir.git)
