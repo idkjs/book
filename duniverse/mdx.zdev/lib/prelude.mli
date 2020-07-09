@@ -14,8 +14,8 @@
  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
  *)
 
-val env_and_file : string -> Block.Env.t Util.One_or_all.t * string
-(** [env_and_file s] returns the environment and file/prelude string describe
+val env_and_file : string -> [ `All | `One of Ocaml_env.t ] * string
+(** [env_and_file s] returns the environment and file/prelude string described
     by [s].
     I.e. [env_and_file "a:f"] associates [f] to the environment named [a],
     [env_and_file " :f"] associates [f] to the default environment, and

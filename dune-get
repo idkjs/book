@@ -1,9 +1,9 @@
 ((config
-  ((version 1) (root_packages (((name rwo)))) (pull_mode Source)
-   (ocaml_compilers (4.10.0))
+  ((version 1) (root_packages (((name rwo))))
    (pins
     (((pin mdx) (url (https://github.com/realworldocaml/mdx.git))
       (tag (master)))))
+   (pull_mode Source) (ocaml_compilers (4.10.0))
    (tools
     ((opam Latest) (ocamlformat Latest) (dune Latest) (odoc Latest)
      (mdx Latest) (lsp Latest) (merlin Latest)))))
@@ -224,10 +224,8 @@
      ((dir markup.0.8.2) (upstream https://github.com/aantron/markup.ml.git)
       (ref ((t 0.8.2) (commit 2c2254e773dbc9c9e6b3a24f983d826c23630d97)))
       (provided_packages (((name markup) (version (0.8.2))))))
-     ((dir mdx.zdev) (upstream https://github.com/gpetiot/mdx.git)
-      (ref
-       ((t apply-preludes-all-envs)
-        (commit ec9badfe6ef60fe86ae321e95cad3e96b1563586)))
+     ((dir mdx.zdev) (upstream https://github.com/realworldocaml/mdx.git)
+      (ref ((t master) (commit fb5b3bd2e5066cc3d0bad29673a55d0d703dc1c0)))
       (provided_packages (((name mdx)))))
      ((dir menhir.20200612)
       (upstream https://gitlab.inria.fr/fpottier/menhir.git)

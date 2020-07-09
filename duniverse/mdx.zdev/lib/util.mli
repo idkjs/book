@@ -22,6 +22,8 @@ module Result : sig
       ('a, 'err) result -> ('a -> ('b, 'err) result) -> ('b, 'err) result
 
     val ( >>| ) : ('a, 'err) result -> ('a -> 'b) -> ('b, 'err) result
+
+    val ( >>! ) : ('a, [ `Msg of string ]) result -> ('a -> int) -> int
   end
 
   val errorf :
@@ -60,20 +62,12 @@ end
 
 module Sexp : sig
   type t = Atom of string | List of t list
+end
 
-  val equal : t -> t -> bool
-
-  module Canonical : sig
-    val to_buffer : buf:Buffer.t -> t -> unit
-
-    val to_string : t -> string
-  end
+module Csexp : sig
+  val to_string : Sexp.t -> string
 end
 
 module Array : sig
   val slice : 'a array -> from:int -> to_:int -> 'a array
-end
-
-module One_or_all : sig
-  type 'a t = All | One of 'a
 end

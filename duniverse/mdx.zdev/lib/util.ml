@@ -22,6 +22,13 @@ module Result = struct
     let ( >>= ) r f = match r with Ok x -> f x | Error _ as e -> e
 
     let ( >>| ) r f = match r with Ok x -> Ok (f x) | Error _ as e -> e
+
+    let ( >>! ) r f =
+      match r with
+      | Ok x -> f x
+      | Error (`Msg e) ->
+          Printf.eprintf "[mdx] Fatal error: %s\n" e;
+          1
   end
 
   let errorf fmt = Format.ksprintf (fun s -> Error (`Msg s)) fmt
@@ -64,39 +71,9 @@ end
 
 module Sexp = struct
   type t = Atom of string | List of t list
-
-  let rec equal t t' =
-    match (t, t') with
-    | Atom s, Atom s' -> String.equal s s'
-    | List l, List l' -> equal_list l l'
-    | _, _ -> false
-
-  and equal_list l l' =
-    match (l, l') with
-    | [], [] -> true
-    | hd :: tl, hd' :: tl' -> equal hd hd' && equal_list tl tl'
-    | _, _ -> false
-
-  module Canonical = struct
-    let to_buffer ~buf sexp =
-      let rec loop = function
-        | Atom str ->
-            Buffer.add_string buf (string_of_int (String.length str));
-            Buffer.add_string buf ":";
-            Buffer.add_string buf str
-        | List e ->
-            Buffer.add_char buf '(';
-            ignore (List.map loop e);
-            Buffer.add_char buf ')'
-      in
-      ignore (loop sexp)
-
-    let to_string sexp =
-      let buf = Buffer.create 1024 in
-      to_buffer ~buf sexp;
-      Buffer.contents buf
-  end
 end
+
+module Csexp = Csexp.Make (Sexp)
 
 module String = struct
   let english_concat ~last_sep words =
@@ -126,8 +103,4 @@ module Array = struct
   let slice t ~from ~to_ =
     let start_index, length = (from, to_ - from + 1) in
     Array.sub t start_index length
-end
-
-module One_or_all = struct
-  type 'a t = All | One of 'a
 end
