@@ -1,0 +1,11 @@
+(mdx
+ (files README.md)
+ (packages
+  core
+  mdx
+  ppx_jane)
+ (preludes
+  prelude.ml
+  subtyping.ml))
+
+(data_only_dirs examples)
